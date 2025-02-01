@@ -19,7 +19,7 @@
             inputLabel: "Please enter the amount of gold you want to get.",
             inputAttributes: {
                 min: 1,
-                max: 9000000,
+                max: 90000000000,
                 step: 1
             },
             inputValue: 1,
@@ -28,11 +28,11 @@
             cancelButtonText: "Cancel"
         });
 
-        if (goldAmount !== undefined && goldAmount >= 1 && goldAmount <= 9000000) {
+        if (goldAmount !== undefined && goldAmount >= 1 && goldAmount <= 90000000000) {
             player.data.gold = goldAmount;
             showSuccessMessage(`You now have ${goldAmount} gold.`);
         } else if (goldAmount !== undefined) {
-            Swal.fire("Invalid Amount", "Please enter a valid amount of gold between 1 and 9000000.", "error");
+            Swal.fire("Invalid Amount", "Please enter a valid amount of gold between 1 and 90000000000.", "error");
         }
     }
 
